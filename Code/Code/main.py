@@ -29,7 +29,7 @@ images_training, labels_training, images_test, labels_test = read_dataset(size_t
 # Randomly select 100 data points to display
 random_instances = list(range(size_training))
 random.shuffle(random_instances)
-displayData(images_training[random_instances[0:100],:])
+displayData(images_training[random_instances[0:100], :])
 
 input('Program paused. Press enter to continue!!!')
 

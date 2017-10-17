@@ -1,5 +1,4 @@
-from numpy import *
-
+import numpy as np
 def roll_params(nn_params, layers):
 
     # Setup some useful variables
@@ -8,7 +7,7 @@ def roll_params(nn_params, layers):
     index = 0
     for i in range(num_layers -1):
         step = layers[i+1] * (layers[i]+1)
-        Theta.append(reshape(nn_params[index:(index+step)],(layers[i+1], (layers[i] + 1))))
+        Theta.append(np.reshape(nn_params[index:(index+step)], (layers[i+1], (layers[i] + 1))))
         
         index = index + step
 

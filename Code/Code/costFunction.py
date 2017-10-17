@@ -1,4 +1,4 @@
-from numpy import *
+import numpy as np
 from sigmoid import sigmoid
 from sigmoidGradient import sigmoidGradient
 from roll_params import roll_params
@@ -21,19 +21,37 @@ def costFunction(nn_weights, layers, X, y, num_labels, lambd):
     Theta = roll_params(nn_weights, layers)
     
     # You need to return the following variables correctly 
-    J = 0;
+    J = 0
     
     # ================================ TODO ================================
     # The vector y passed into the function is a vector of labels
     # containing values from 1..K. You need to map this vector into a 
     # binary vector of 1's and 0's to be used with the neural network
     # cost function.
-    yv = zeros((num_labels, m))
-  
+    yv = np.zeros((num_labels, m))
+    for i in range(len(y)):
+        yv[int(y[i])] = 1  # TODO: the int conversion is maybe not the useful
+
 
     # ================================ TODO ================================
     # In this point calculate the cost of the neural network (feedforward)
-       
+    x = np.zeros(np.shape(X))
+    print("shape of X")
+    print(np.shape(X))
+
+    for i in range(num_layers):
+        print("shape of x")
+        print(np.shape(x))
+        print("shape of Theta["+str(i)+"]")
+        print(np.shape(Theta[i]))
+        x = np.dot(x, Theta[i])
+
+    print("shape of x")
+    print(np.shape(x))
+
+    J = (yv*np.log(x)-(1-yv)*np.log(1-x))/m
+
+    print(np.shape(J))
 
     return J
 

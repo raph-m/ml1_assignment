@@ -1,4 +1,4 @@
-from numpy import *
+import numpy as np
 
 def randInitializeWeights(layers):
 
@@ -7,7 +7,12 @@ def randInitializeWeights(layers):
         
     Theta = []
     for i in range(num_of_layers-1):
-        W = zeros((layers[i+1], layers[i] + 1),dtype = 'float64')
+        W = np.zeros((layers[i+1], layers[i] + 1), dtype='float64')
+
+        for a in range(layers[i+1]):
+            for b in range(layers[i] + 1):
+                W[a, b] = np.random.uniform(-epsilon, epsilon)
+
         # ====================== TODO ======================
         # Instructions: Initialize W randomly so that we break the symmetry while
         #               training the neural network.
@@ -16,4 +21,4 @@ def randInitializeWeights(layers):
         Theta.append(W)
                 
     return Theta
-            
+
