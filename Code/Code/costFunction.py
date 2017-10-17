@@ -39,12 +39,12 @@ def costFunction(nn_weights, layers, X, y, num_labels, lambd):
     print("shape of X")
     print(np.shape(X))
 
-    for i in range(num_layers):
+    for i in range(num_layers-1):
         print("shape of x")
         print(np.shape(x))
         print("shape of Theta["+str(i)+"]")
         print(np.shape(Theta[i]))
-        x = np.dot(x, Theta[i])
+        x = np.dot(np.transpose(x), Theta[i])
 
     print("shape of x")
     print(np.shape(x))
