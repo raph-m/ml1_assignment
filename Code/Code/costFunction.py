@@ -35,23 +35,22 @@ def costFunction(nn_weights, layers, X, y, num_labels, lambd):
 
     # ================================ TODO ================================
     # In this point calculate the cost of the neural network (feedforward)
-    x = np.zeros(np.shape(X))
-    print("shape of X")
-    print(np.shape(X))
+    x = np.copy(X)
 
-    for i in range(num_layers-1):
+    for i in range(num_layers - 1):
         print("shape of x")
         print(np.shape(x))
-        print("shape of Theta["+str(i)+"]")
-        print(np.shape(Theta[i]))
-        x = np.dot(np.transpose(x), Theta[i])
 
-    print("shape of x")
-    print(np.shape(x))
+        s = np.shape(Theta[i])
+        theta = Theta[i][:, 0:s[1] - 1]
+        x = np.dot(x, np.transpose(theta))
+        x = x + Theta[i][:, s[1] - 1]
+        x = sigmoid(x)
 
-    J = (yv*np.log(x)-(1-yv)*np.log(1-x))/m
+    J = (yv * np.log(x) - (1 - yv) * np.log(1 - x)) / m
+    J = np.sum(J)
 
-    print(np.shape(J))
+    J += np.sum(Theta*Theta)
 
     return J
 

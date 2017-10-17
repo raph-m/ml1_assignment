@@ -1,5 +1,6 @@
 import numpy as np
 
+
 def sigmoid(z):
 
     # SIGMOID returns sigmoid function evaluated at z
@@ -15,6 +16,6 @@ def sigmoid(z):
                 g[a,b] = 1/(1+np.exp(-z[a,b]))
     else:
         for a in range(len(g)):
-        g[a] = 1/(1+np.exp(-z[a]))
+            g[a] = 1/(1+np.exp(-z[a]))
 
     return g

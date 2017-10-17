@@ -2,10 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="38523dbd-143a-4a87-aed5-82e335c772f4" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.gitignore" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Code/Code/costFunction.py" afterPath="$PROJECT_DIR$/Code/Code/costFunction.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Code/Code/debugInializeWeights.py" afterPath="$PROJECT_DIR$/Code/Code/debugInializeWeights.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Code/Code/main_notebook.ipynb" afterPath="$PROJECT_DIR$/Code/Code/main_notebook.ipynb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Code/Code/sigmoid.py" afterPath="$PROJECT_DIR$/Code/Code/sigmoid.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -23,8 +24,8 @@
       <file leaf-file-name="main.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Code/Code/main.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="115">
-              <caret line="95" column="0" lean-forward="false" selection-start-line="95" selection-start-column="0" selection-end-line="96" selection-end-column="18" />
+            <state relative-caret-position="322">
+              <caret line="98" column="30" lean-forward="false" selection-start-line="98" selection-start-column="30" selection-end-line="98" selection-end-column="30" />
               <folding>
                 <element signature="e#0#19#0" expanded="true" />
               </folding>
@@ -32,7 +33,17 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="checkNNCost.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="debugInializeWeights.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Code/Code/debugInializeWeights.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="115">
+              <caret line="5" column="51" lean-forward="false" selection-start-line="5" selection-start-column="51" selection-end-line="5" selection-end-column="51" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="checkNNCost.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Code/Code/checkNNCost.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="483">
@@ -44,11 +55,21 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="sigmoid.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Code/Code/sigmoid.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="46">
+              <caret line="2" column="0" lean-forward="true" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="costFunction.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Code/Code/costFunction.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="138">
-              <caret line="6" column="0" lean-forward="false" selection-start-line="6" selection-start-column="0" selection-end-line="55" selection-end-column="12" />
+            <state relative-caret-position="615">
+              <caret line="52" column="28" lean-forward="true" selection-start-line="52" selection-start-column="0" selection-end-line="53" selection-end-column="0" />
               <folding>
                 <element signature="e#0#18#0" expanded="true" />
               </folding>
@@ -78,13 +99,14 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/Code/Code/randInitializeWeights.py" />
-        <option value="$PROJECT_DIR$/Code/Code/sigmoid.py" />
         <option value="$PROJECT_DIR$/Code/Code/__init__.py" />
         <option value="$PROJECT_DIR$/Code/Code/sigmoidGradient.py" />
         <option value="$PROJECT_DIR$/Code/Code/unroll_params.py" />
         <option value="$PROJECT_DIR$/Code/Code/roll_params.py" />
         <option value="$PROJECT_DIR$/Code/Code/main.py" />
+        <option value="$PROJECT_DIR$/Code/Code/sigmoid.py" />
         <option value="$PROJECT_DIR$/Code/Code/costFunction.py" />
+        <option value="$PROJECT_DIR$/Code/Code/debugInializeWeights.py" />
       </list>
     </option>
   </component>
@@ -95,7 +117,7 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="-1840" />
+    <option name="x" value="80" />
     <option name="y" value="-5" />
     <option name="width" value="1841" />
     <option name="height" value="1086" />
@@ -378,7 +400,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-1840" y="-5" width="1841" height="1086" extended-state="6" />
+    <frame x="80" y="-5" width="1841" height="1086" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24985932" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -386,7 +408,7 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.46923077" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32967034" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
@@ -439,14 +461,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Code/Code/sigmoid.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="299">
-          <caret line="13" column="12" lean-forward="true" selection-start-line="13" selection-start-column="12" selection-end-line="13" selection-end-column="12" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Code/Code/roll_params.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="161">
@@ -471,10 +485,28 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Code/Code/checkNNCost.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="483">
+          <caret line="21" column="64" lean-forward="false" selection-start-line="21" selection-start-column="64" selection-end-line="21" selection-end-column="64" />
+          <folding>
+            <element signature="e#0#19#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Code/Code/sigmoid.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="46">
+          <caret line="2" column="0" lean-forward="true" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Code/Code/costFunction.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="138">
-          <caret line="6" column="0" lean-forward="false" selection-start-line="6" selection-start-column="0" selection-end-line="55" selection-end-column="12" />
+        <state relative-caret-position="615">
+          <caret line="52" column="28" lean-forward="true" selection-start-line="52" selection-start-column="0" selection-end-line="53" selection-end-column="0" />
           <folding>
             <element signature="e#0#18#0" expanded="true" />
           </folding>
@@ -483,21 +515,19 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Code/Code/main.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="115">
-          <caret line="95" column="0" lean-forward="false" selection-start-line="95" selection-start-column="0" selection-end-line="96" selection-end-column="18" />
+        <state relative-caret-position="322">
+          <caret line="98" column="30" lean-forward="false" selection-start-line="98" selection-start-column="30" selection-end-line="98" selection-end-column="30" />
           <folding>
             <element signature="e#0#19#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Code/Code/checkNNCost.py">
+    <entry file="file://$PROJECT_DIR$/Code/Code/debugInializeWeights.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="483">
-          <caret line="21" column="64" lean-forward="false" selection-start-line="21" selection-start-column="64" selection-end-line="21" selection-end-column="64" />
-          <folding>
-            <element signature="e#0#19#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="115">
+          <caret line="5" column="51" lean-forward="false" selection-start-line="5" selection-start-column="51" selection-end-line="5" selection-end-column="51" />
+          <folding />
         </state>
       </provider>
     </entry>
