@@ -23,14 +23,44 @@ def backwards(nn_weights, layers, X, y, num_labels, lambd):
     Theta = roll_params(nn_weights, layers)
   
     # You need to return the following variables correctly 
-    Theta_grad = [zeros(w.shape) for w in Theta]
+    delta = [zeros(w.shape) for w in Theta]
 
     # ================================ TODO ================================
     # The vector y passed into the function is a vector of labels
     # containing values from 1..K. You need to map this vector into a 
     # binary vector of 1's and 0's to be used with the neural network
     # cost function.
-    yv = zeros((num_labels, m))
+    yv = np.zeros((num_labels, m))
+    for i in range(len(y)):
+        yv[int(y[i])] = 1  # TODO: the int conversion is maybe not the useful
+    yv = np.transpose(yv)
+
+    a = []
+    z = []
+    x = np.copy(X)
+    a.append(x)
+
+    for i in range(num_layers - 1):
+        print("shape of x")
+        print(np.shape(x))
+
+        s = np.shape(Theta[i])
+        theta = Theta[i][:, 0:s[1] - 1]
+        x = np.dot(x, np.transpose(theta))
+        x = x + Theta[i][:, s[1] - 1]
+        z.append(x)
+        x = sigmoid(x)
+        a.append(x)
+
+    cost = (yv * np.log(x) - (1 - yv) * np.log(1 - x)) / m
+    cost = -np.sum(cost)
+
+    somme = 0
+
+    for i in range(num_layers - 1):
+        somme += lambd * np.sum(Theta[i] ** 2) / (2 * m)
+
+    cost += somme
 
     # ================================ TODO ================================
     # In this point implement the backpropagaition algorithm 
