@@ -10,11 +10,13 @@ def sigmoid(z):
     # ============================= TODO ================================
     # Instructions: Compute sigmoid function evaluated at each value of z.
 
-    if size[1]:
+    try:
+        s = size[1]
         for a in range(size[0]):
             for b in range(size[1]):
-                g[a,b] = 1/(1+np.exp(-z[a,b]))
-    else:
+                g[a, b] = 1/(1+np.exp(-z[a, b]))
+
+    except:
         for a in range(len(g)):
             g[a] = 1/(1+np.exp(-z[a]))
 

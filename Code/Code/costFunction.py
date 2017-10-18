@@ -19,10 +19,7 @@ def costFunction(nn_weights, layers, X, y, num_labels, lambd):
 
     # Unroll Params
     Theta = roll_params(nn_weights, layers)
-    
-    # You need to return the following variables correctly 
-    J = 0
-    
+
     # ================================ TODO ================================
     # The vector y passed into the function is a vector of labels
     # containing values from 1..K. You need to map this vector into a 
@@ -31,7 +28,7 @@ def costFunction(nn_weights, layers, X, y, num_labels, lambd):
     yv = np.zeros((num_labels, m))
     for i in range(len(y)):
         yv[int(y[i])] = 1  # TODO: the int conversion is maybe not the useful
-
+    yv = np.transpose(yv)
 
     # ================================ TODO ================================
     # In this point calculate the cost of the neural network (feedforward)
@@ -47,12 +44,17 @@ def costFunction(nn_weights, layers, X, y, num_labels, lambd):
         x = x + Theta[i][:, s[1] - 1]
         x = sigmoid(x)
 
-    J = (yv * np.log(x) - (1 - yv) * np.log(1 - x)) / m
-    J = np.sum(J)
+    cost = (yv * np.log(x) - (1 - yv) * np.log(1 - x)) / m
+    cost = -np.sum(cost)
 
-    J += np.sum(Theta*Theta)
+    somme = 0
 
-    return J
+    for i in range(num_layers - 1):
+        somme += lambd * np.sum(Theta[i] ** 2) / (2 * m)
+
+    cost += somme
+
+    return cost
 
     
 
