@@ -1,4 +1,4 @@
-from numpy import *
+import numpy as np
 from debugInializeWeights import debugInitializeWeights
 from computeNumericalGradient import computeNumericalGradient
 from backwards import backwards
@@ -19,7 +19,7 @@ def checkNNGradients(lambd):
     Theta.append(debugInitializeWeights(num_labels, hidden_layer_size))
 
     X = debugInitializeWeights(m, input_layer_size - 1)
-    y = remainder(arange(m)+1, num_labels)
+    y = np.remainder(np.arange(m)+1, num_labels)
     
     # Unroll parameters
     nn_params = unroll_params(Theta)
@@ -31,9 +31,9 @@ def checkNNGradients(lambd):
     truegrad = backwards(nn_params, layers, X, y, num_labels, lambd)
 
     
-    print(concatenate(([numgrad], [truegrad]), axis = 0).transpose())
+    print(np.concatenate(([numgrad], [truegrad]), axis = 0).transpose())
     print("The above two columns must be very similar.\n(Left-Numerical Gradient, Right-Analytical Gradient (BackPropagation)\n")
     
-    diff = linalg.norm(numgrad - truegrad) / linalg.norm(numgrad + truegrad)
+    diff = np.linalg.norm(numgrad - truegrad) / np.linalg.norm(numgrad + truegrad)
     print("\nNote: If the implementation of the backpropagation is correct, the relative different must be quite small (less that 1e-09).")
     print("Relative difference: " + str(diff) + "\n")

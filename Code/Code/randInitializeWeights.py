@@ -3,7 +3,7 @@ import numpy as np
 def randInitializeWeights(layers):
 
     num_of_layers = len(layers)
-    epsilon = 0.12
+    epsilon = 0.2
         
     Theta = []
     for i in range(num_of_layers-1):

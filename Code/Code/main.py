@@ -7,7 +7,7 @@ from randInitializeWeights import randInitializeWeights
 from costFunction import costFunction
 from unroll_params import unroll_params
 from roll_params import roll_params
-from scipy.optimize import *
+import scipy.optimize as opt
 from predict import predict
 from backwards import backwards
 from checkNNCost import checkNNCost
@@ -22,8 +22,8 @@ print("\nLoading and visualizing Data ...\n")
 
 #Reading of the dataset
 # You are free to reduce the number of samples retained for training, in order to reduce the computational cost
-size_training = 60000     # number of samples retained for training
-size_test     = 10000     # number of samples retained for testing
+size_training = 600     # number of samples retained for training
+size_test     = 100     # number of samples retained for testing
 images_training, labels_training, images_test, labels_test = read_dataset(size_training, size_test)
 
 # Randomly select 100 data points to display
@@ -135,15 +135,18 @@ input('\nProgram paused. Press enter to continue!!!')
 print("\nTraining Neural Network... \n")
 
 #  You should also try different values of the regularization factor
-lambd = 3.0
+lambd = 30.0
 
-res = fmin_l_bfgs_b(costFunction, nn_weights, fprime=backwards, args = (layers,  images_training, labels_training, num_labels, 1.0), maxfun = 50, factr = 1., disp = True)
+res = opt.fmin_l_bfgs_b(costFunction, nn_weights, fprime=backwards, args=(layers,  images_training, labels_training, num_labels, 1.0), maxfun=50, factr=1., disp=True)
 Theta = roll_params(res[0], layers)
-
+print("Theta")
+print(Theta)
 input('\nProgram paused. Press enter to continue!!!')
 
 print("\nTesting Neural Network... \n")
 
-pred  = predict(Theta, images_test)
-print('\nAccuracy: ' + str(mean(labels_test==pred) * 100))
+pred = predict(Theta, images_test)
 
+input('\nProgram paused. Press enter to continue!!!')
+
+print('\nAccuracy: ' + str(mean(labels_test==pred) * 100))

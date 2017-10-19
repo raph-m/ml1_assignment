@@ -27,7 +27,7 @@ def costFunction(nn_weights, layers, X, y, num_labels, lambd):
     # cost function.
     yv = np.zeros((num_labels, m))
     for i in range(len(y)):
-        yv[int(y[i])] = 1  # TODO: the int conversion is maybe not the useful
+        yv[int(y[i])] = 1  # TODO: the int conversion is maybe not useful
     yv = np.transpose(yv)
 
     # ================================ TODO ================================
@@ -35,13 +35,10 @@ def costFunction(nn_weights, layers, X, y, num_labels, lambd):
     x = np.copy(X)
 
     for i in range(num_layers - 1):
-        print("shape of x")
-        print(np.shape(x))
-
         s = np.shape(Theta[i])
-        theta = Theta[i][:, 0:s[1] - 1]
+        theta = Theta[i][:, 1:s[1]]
         x = np.dot(x, np.transpose(theta))
-        x = x + Theta[i][:, s[1] - 1]
+        x = x + Theta[i][:, 0]
         x = sigmoid(x)
 
     cost = (yv * np.log(x) - (1 - yv) * np.log(1 - x)) / m

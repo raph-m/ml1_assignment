@@ -1,8 +1,16 @@
-from numpy import *
+import numpy as np
 from sigmoid import sigmoid
 from sigmoidGradient import sigmoidGradient
 from roll_params import roll_params
 from unroll_params import unroll_params
+
+
+def insertOne(x):
+    s = x.shape
+    a = np.ones((s[0], s[1]+1))
+    a[:, 1:] = x
+    return a
+
 
 def backwards(nn_weights, layers, X, y, num_labels, lambd):
     # Computes the gradient fo the neural network.
@@ -12,7 +20,7 @@ def backwards(nn_weights, layers, X, y, num_labels, lambd):
     # y: a vector with the labels of each instance
     # num_labels: the number of units in the output layer
     # lambd: regularization factor
-    
+
     # Setup some useful variables
     m = X.shape[0]
     num_layers = len(layers)
@@ -21,13 +29,10 @@ def backwards(nn_weights, layers, X, y, num_labels, lambd):
     # The parameters for the neural network are "unrolled" into the vector
     # nn_params and need to be converted back into the weight matrices.
     Theta = roll_params(nn_weights, layers)
-  
-    # You need to return the following variables correctly 
-    delta = [zeros(w.shape) for w in Theta]
 
     # ================================ TODO ================================
     # The vector y passed into the function is a vector of labels
-    # containing values from 1..K. You need to map this vector into a 
+    # containing values from 1..K. You need to map this vector into a
     # binary vector of 1's and 0's to be used with the neural network
     # cost function.
     yv = np.zeros((num_labels, m))
@@ -38,19 +43,39 @@ def backwards(nn_weights, layers, X, y, num_labels, lambd):
     a = []
     z = []
     x = np.copy(X)
-    a.append(x)
+    a.append(insertOne(x))
+    z.append(x)
 
     for i in range(num_layers - 1):
-        print("shape of x")
+        print("shape of x at stage " + str(i))
         print(np.shape(x))
 
         s = np.shape(Theta[i])
-        theta = Theta[i][:, 0:s[1] - 1]
+        theta = Theta[i][:, 1:s[1]]
         x = np.dot(x, np.transpose(theta))
-        x = x + Theta[i][:, s[1] - 1]
+        x = x + Theta[i][:, 0]
         z.append(x)
         x = sigmoid(x)
-        a.append(x)
+        a.append(insertOne(x))
+
+    print("shape of x at the end ")
+    print(np.shape(x))
+
+    # You need to return the following variables correctly
+    delta = [np.zeros(w.shape) for w in z]
+    delta[num_layers - 1] = (x - yv)
+
+    for i in range(num_layers - 2, 0, -1):
+        print("computing delta for i=" + str(i))
+        s = np.shape(Theta[i])
+        theta = Theta[i][:, 1:s[1]]
+        temp = np.dot(np.transpose(theta), np.transpose(delta[i + 1]))
+        delta[i] = np.transpose(temp) * sigmoidGradient(z[i])
+
+    Delta = []
+    for i in range(num_layers - 1):
+        temp = np.dot(np.transpose(delta[i + 1]), a[i])
+        Delta.append(temp)
 
     cost = (yv * np.log(x) - (1 - yv) * np.log(1 - x)) / m
     cost = -np.sum(cost)
@@ -63,11 +88,21 @@ def backwards(nn_weights, layers, X, y, num_labels, lambd):
     cost += somme
 
     # ================================ TODO ================================
-    # In this point implement the backpropagaition algorithm 
-    
+    # In this point implement the backpropagaition algorithm
+
+    Theta_grad = [(d / m) for d in Delta]
+
+    i = 0
+    for t in Theta:
+        current = lambd*t/m
+        current[:, 0] = current[:, 0]*0
+        Theta_grad[i] += current
+        i += 1
+
     # Unroll Params
     Theta_grad = unroll_params(Theta_grad)
 
     return Theta_grad
 
-    
+
+

@@ -1,5 +1,6 @@
-from numpy import *
+import numpy as np
 from sigmoid import sigmoid
+
 
 def predict(Theta, X):
     # Takes as input a number of instances and the network learned variables
@@ -10,10 +11,29 @@ def predict(Theta, X):
     num_labels = Theta[-1].shape[0]
     num_layers = len(Theta) + 1
 
+    p = np.zeros((1, m))
+
+    x = np.copy(X)
+
+    for i in range(num_layers - 1):
+        s = np.shape(Theta[i])
+        theta = Theta[i][:, 1:s[1]]
+        x = np.dot(x, np.transpose(theta))
+        x = x + Theta[i][:, 0]
+        x = sigmoid(x)
+
+    print("x")
+    print(x)
+    print("np.argmax(x, axis=0)")
+    print(np.argmax(x, axis=1))
+
+    for i in range(m):
+        pass
+
+
     # ================================ TODO ================================
     # You need to return the following variables correctly
-    p = zeros((1,m))
- 
+
     
     return p
 
