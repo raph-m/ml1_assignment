@@ -95,7 +95,12 @@ def backwards(nn_weights, layers, X, y, num_labels, lambd):
     i = 0
     for t in Theta:
         current = lambd*t/m
-        current[:, 0] = current[:, 0]*0
+        # d'après le poly il faudrait qu'il y ait cette ligne
+        # mais après quand on son checkNNGradient il vaut mieux enlever
+        # cette ligne:
+        # current[:, 0] = current[:, 0]*0
+        print("current")
+        print(current)
         Theta_grad[i] += current
         i += 1
 
@@ -103,6 +108,3 @@ def backwards(nn_weights, layers, X, y, num_labels, lambd):
     Theta_grad = unroll_params(Theta_grad)
 
     return Theta_grad
-
-
-

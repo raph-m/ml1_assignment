@@ -1,4 +1,4 @@
-from numpy import *
+import numpy as np
 from read_dataset import read_dataset
 import matplotlib.pyplot as plt
 import matplotlib.cm as cm
@@ -28,7 +28,7 @@ images_training, labels_training, images_test, labels_test = read_dataset(size_t
 
 # Randomly select 100 data points to display
 random_instances = list(range(size_training))
-random.shuffle(random_instances)
+np.random.shuffle(random_instances)
 displayData(images_training[random_instances[0:100], :])
 
 input('Program paused. Press enter to continue!!!')
@@ -69,7 +69,7 @@ input('\nProgram paused. Press enter to continue!!!')
 
 print("\nEvaluating sigmoid function ...\n")
 
-g = sigmoid(array([1, -0.5, 0,  0.5, 1]))
+g = sigmoid(np.array([1, -0.5, 0,  0.5, 1]))
 print("Sigmoid evaluated at [1 -0.5 0 0.5 1]:  ")
 print(g)
 
@@ -83,7 +83,7 @@ input('\nProgram paused. Press enter to continue!!!')
 
 print("\nEvaluating Sigmoid Gradient function ...\n")
 
-g = sigmoidGradient(array([1, -0.5, 0,  0.5, 1]))
+g = sigmoidGradient(np.array([1, -0.5, 0,  0.5, 1]))
 print("Sigmoid Gradient evaluated at [1 -0.5 0 0.5 1]:  ")
 print(g)
 
@@ -149,4 +149,4 @@ pred = predict(Theta, images_test)
 
 input('\nProgram paused. Press enter to continue!!!')
 
-print('\nAccuracy: ' + str(mean(labels_test==pred) * 100))
+print('\nAccuracy: ' + str(np.mean(labels_test==pred) * 100))

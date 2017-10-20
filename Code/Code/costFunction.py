@@ -4,6 +4,7 @@ from sigmoidGradient import sigmoidGradient
 from roll_params import roll_params
 from unroll_params import unroll_params
 
+
 def costFunction(nn_weights, layers, X, y, num_labels, lambd):
     # Computes the cost function of the neural network.
     # nn_weights: Neural network parameters (vector)
@@ -40,6 +41,8 @@ def costFunction(nn_weights, layers, X, y, num_labels, lambd):
         x = np.dot(x, np.transpose(theta))
         x = x + Theta[i][:, 0]
         x = sigmoid(x)
+        print("x at step "+str(i))
+        print(x)
 
     cost = (yv * np.log(x) - (1 - yv) * np.log(1 - x)) / m
     cost = -np.sum(cost)
