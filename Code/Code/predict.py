@@ -25,15 +25,10 @@ def predict(Theta, X):
     print("x")
     print(x)
     print("np.argmax(x, axis=0)")
-    print(np.argmax(x, axis=1))
+    prediction = np.argmax(x, axis=1)
 
     for i in range(m):
-        pass
-
-
-    # ================================ TODO ================================
-    # You need to return the following variables correctly
-
+        p[0, i] = prediction[i]
     
     return p
 

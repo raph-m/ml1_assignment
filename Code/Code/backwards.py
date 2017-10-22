@@ -3,7 +3,7 @@ from sigmoid import sigmoid
 from sigmoidGradient import sigmoidGradient
 from roll_params import roll_params
 from unroll_params import unroll_params
-
+from predict import predict
 
 def insertOne(x):
     s = x.shape
@@ -46,9 +46,17 @@ def backwards(nn_weights, layers, X, y, num_labels, lambd):
     a.append(insertOne(x))
     z.append(x)
 
+    pred = predict(Theta, X)
+    accuracy = np.mean(y == pred) * 100
+    print("accuracy = "+str(accuracy))
+
+    print("***********************************")
+    print(Theta[0][0, 0])
+    print(Theta[0][1, 0])
+    print(Theta[0][2, 0])
+    print(Theta[0][0, 1])
+
     for i in range(num_layers - 1):
-        print("shape of x at stage " + str(i))
-        print(np.shape(x))
 
         s = np.shape(Theta[i])
         theta = Theta[i][:, 1:s[1]]
@@ -58,17 +66,12 @@ def backwards(nn_weights, layers, X, y, num_labels, lambd):
         x = sigmoid(x)
         a.append(insertOne(x))
 
-    print("shape of x at the end ")
-    print(np.shape(x))
-
-    # You need to return the following variables correctly
     delta = [np.zeros(w.shape) for w in z]
     delta[num_layers - 1] = (x - yv)
 
     for i in range(num_layers - 2, 0, -1):
-        print("computing delta for i=" + str(i))
         s = np.shape(Theta[i])
-        theta = Theta[i][:, 1:s[1]]
+        theta = np.copy(Theta[i][:, 1:s[1]])
         temp = np.dot(np.transpose(theta), np.transpose(delta[i + 1]))
         delta[i] = np.transpose(temp) * sigmoidGradient(z[i])
 
@@ -77,7 +80,7 @@ def backwards(nn_weights, layers, X, y, num_labels, lambd):
         temp = np.dot(np.transpose(delta[i + 1]), a[i])
         Delta.append(temp)
 
-    cost = (yv * np.log(x) - (1 - yv) * np.log(1 - x)) / m
+    cost = (yv * np.log(x) + (1 - yv) * np.log(1 - x)) / m
     cost = -np.sum(cost)
 
     somme = 0
@@ -86,6 +89,8 @@ def backwards(nn_weights, layers, X, y, num_labels, lambd):
         somme += lambd * np.sum(Theta[i] ** 2) / (2 * m)
 
     cost += somme
+
+    print("cost = "+str(cost))
 
     # ================================ TODO ================================
     # In this point implement the backpropagaition algorithm
@@ -98,9 +103,7 @@ def backwards(nn_weights, layers, X, y, num_labels, lambd):
         # d'après le poly il faudrait qu'il y ait cette ligne
         # mais après quand on son checkNNGradient il vaut mieux enlever
         # cette ligne:
-        # current[:, 0] = current[:, 0]*0
-        print("current")
-        print(current)
+        current[:, 0] = current[:, 0]*0
         Theta_grad[i] += current
         i += 1
 

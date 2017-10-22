@@ -41,10 +41,8 @@ def costFunction(nn_weights, layers, X, y, num_labels, lambd):
         x = np.dot(x, np.transpose(theta))
         x = x + Theta[i][:, 0]
         x = sigmoid(x)
-        print("x at step "+str(i))
-        print(x)
 
-    cost = (yv * np.log(x) - (1 - yv) * np.log(1 - x)) / m
+    cost = (yv * np.log(x) + (1 - yv) * np.log(1 - x)) / m
     cost = -np.sum(cost)
 
     somme = 0

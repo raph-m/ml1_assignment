@@ -22,8 +22,8 @@ print("\nLoading and visualizing Data ...\n")
 
 #Reading of the dataset
 # You are free to reduce the number of samples retained for training, in order to reduce the computational cost
-size_training = 600     # number of samples retained for training
-size_test     = 100     # number of samples retained for testing
+size_training = 60000     # number of samples retained for training
+size_test     = 10000     # number of samples retained for testing
 images_training, labels_training, images_test, labels_test = read_dataset(size_training, size_test)
 
 # Randomly select 100 data points to display
@@ -38,7 +38,7 @@ print("\nSetting up Neural Network Structure ...\n")
 
 # Setup the parameters you will use for this exercise
 input_layer_size   = 784        # 28x28 Input Images of Digits
-num_labels         = 10         # 10 labels, from 0 to 9 (one label for each digit) 
+num_labels         = 10         # 10 labels, from 0 to 9 (one label for each digit)
 
 num_of_hidden_layers = int(input('Please select the number of hidden layers: '))
 print("\n")
@@ -135,12 +135,11 @@ input('\nProgram paused. Press enter to continue!!!')
 print("\nTraining Neural Network... \n")
 
 #  You should also try different values of the regularization factor
-lambd = 30.0
+lambd = 0.0
 
 res = opt.fmin_l_bfgs_b(costFunction, nn_weights, fprime=backwards, args=(layers,  images_training, labels_training, num_labels, 1.0), maxfun=50, factr=1., disp=True)
 Theta = roll_params(res[0], layers)
-print("Theta")
-print(Theta)
+
 input('\nProgram paused. Press enter to continue!!!')
 
 print("\nTesting Neural Network... \n")

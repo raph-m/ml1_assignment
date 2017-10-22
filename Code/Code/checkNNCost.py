@@ -3,6 +3,7 @@ from debugInializeWeights import debugInitializeWeights
 from costFunction import costFunction
 from unroll_params import unroll_params
 
+
 def checkNNCost(lambd):
 
     input_layer_size  = 3;
