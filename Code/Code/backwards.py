@@ -5,6 +5,7 @@ from roll_params import roll_params
 from unroll_params import unroll_params
 from predict import predict
 
+
 def insertOne(x):
     s = x.shape
     a = np.ones((s[0], s[1]+1))
@@ -37,7 +38,7 @@ def backwards(nn_weights, layers, X, y, num_labels, lambd):
     # cost function.
     yv = np.zeros((num_labels, m))
     for i in range(len(y)):
-        yv[int(y[i])] = 1  # TODO: the int conversion is maybe not the useful
+        yv[int(y[i]), i] = 1  # TODO: the int conversion is maybe not the useful
     yv = np.transpose(yv)
 
     a = []
@@ -103,7 +104,7 @@ def backwards(nn_weights, layers, X, y, num_labels, lambd):
         # d'après le poly il faudrait qu'il y ait cette ligne
         # mais après quand on son checkNNGradient il vaut mieux enlever
         # cette ligne:
-        current[:, 0] = current[:, 0]*0
+        # current[:, 0] = current[:, 0]*0
         Theta_grad[i] += current
         i += 1
 

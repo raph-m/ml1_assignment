@@ -28,7 +28,7 @@ def costFunction(nn_weights, layers, X, y, num_labels, lambd):
     # cost function.
     yv = np.zeros((num_labels, m))
     for i in range(len(y)):
-        yv[int(y[i])] = 1  # TODO: the int conversion is maybe not useful
+        yv[int(y[i]), i] = 1  # TODO: the int conversion is maybe not useful
     yv = np.transpose(yv)
 
     # ================================ TODO ================================

@@ -1,1 +1,12 @@
 # Created by .ignore support plugin (hsz.mobi)
+/Code/Code/backward_notebook.ipynb
+/Code/Code/main_notebook.ipynb
+/Code/Code/notebook.ipynb
+/Code/Code/notebook_cost.ipynb
+/Code/Code/notebook_training.ipynb
+/Code/Code/testCostFunction.ipynb
+/Code/Code/.ipynb_checkpoints/
+*.pyc
+Code/Code/__pycache__/backwards.cpython-35.pyc
+Code/Code/__pycache__/costFunction.cpython-35.pyc
+.idea/workspace.xml
