@@ -51,12 +51,6 @@ def backwards(nn_weights, layers, X, y, num_labels, lambd):
     accuracy = np.mean(y == pred) * 100
     print("accuracy = "+str(accuracy))
 
-    print("***********************************")
-    print(Theta[0][0, 0])
-    print(Theta[0][1, 0])
-    print(Theta[0][2, 0])
-    print(Theta[0][0, 1])
-
     for i in range(num_layers - 1):
 
         s = np.shape(Theta[i])

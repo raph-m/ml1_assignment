@@ -135,7 +135,7 @@ input('\nProgram paused. Press enter to continue!!!')
 print("\nTraining Neural Network... \n")
 
 #  You should also try different values of the regularization factor
-lambd = 0.0
+lambd = 3.0
 
 res = opt.fmin_l_bfgs_b(costFunction, nn_weights, fprime=backwards, args=(layers,  images_training, labels_training, num_labels, 1.0), maxfun=50, factr=1., disp=True)
 Theta = roll_params(res[0], layers)
@@ -145,7 +145,9 @@ input('\nProgram paused. Press enter to continue!!!')
 print("\nTesting Neural Network... \n")
 
 pred = predict(Theta, images_test)
+pred2 = predict(Theta, images_training)
 
 input('\nProgram paused. Press enter to continue!!!')
 
-print('\nAccuracy: ' + str(np.mean(labels_test==pred) * 100))
+print('\nTrain Accuracy: ' + str(np.mean(labels_training==pred2) * 100))
+print('\nTest Accuracy: ' + str(np.mean(labels_test==pred) * 100))

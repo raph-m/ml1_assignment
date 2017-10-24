@@ -22,9 +22,6 @@ def predict(Theta, X):
         x = x + Theta[i][:, 0]
         x = sigmoid(x)
 
-    print("x")
-    print(x)
-    print("np.argmax(x, axis=0)")
     prediction = np.argmax(x, axis=1)
 
     for i in range(m):
