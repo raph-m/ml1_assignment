@@ -1,3 +1,0 @@
-Le modèle auquel il faudra comparer les résultats (valeur de référence):
-layers = [], lambda = 0.0, accuracy_training = 91.8, accuracy_test = 91.8
-layers = [], lambda = 3.0, accuracy_training = 91.6, accuracy_test = 91.8
