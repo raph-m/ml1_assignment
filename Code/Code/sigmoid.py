@@ -7,9 +7,7 @@ def sigmoid(z):
     size = np.shape(z)
     g = np.zeros(size)
 
-    # ============================= TODO ================================
     # Instructions: Compute sigmoid function evaluated at each value of z.
-
     try:
         s = size[1]
         for a in range(size[0]):

@@ -2,32 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="38523dbd-143a-4a87-aed5-82e335c772f4" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Code/__MACOSX/._Code" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Code/__MACOSX/Code/._.DS_Store" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Code/__MACOSX/Code/._backwards.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Code/__MACOSX/Code/._checkNNCost.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Code/__MACOSX/Code/._checkNNGradients.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Code/__MACOSX/Code/._computeNumericalGradient.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Code/__MACOSX/Code/._costFunction.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Code/__MACOSX/Code/._debugInializeWeights.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Code/__MACOSX/Code/._displayData.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Code/__MACOSX/Code/._iterate.dat" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Code/__MACOSX/Code/._main.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Code/__MACOSX/Code/._mnist2.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Code/__MACOSX/Code/._predict.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Code/__MACOSX/Code/._randInitializeWeights.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Code/__MACOSX/Code/._read_dataset.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Code/__MACOSX/Code/._roll_params.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Code/__MACOSX/Code/._sigmoid.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Code/__MACOSX/Code/._sigmoidGradient.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Code/__MACOSX/Code/._t10k-images-idx3-ubyte" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Code/__MACOSX/Code/._t10k-labels-idx1-ubyte" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Code/__MACOSX/Code/._train-images-idx3-ubyte" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Code/__MACOSX/Code/._train-labels-idx1-ubyte" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Code/__MACOSX/Code/._unroll_params.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/resultats" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Code/Code/backwards.py" afterPath="$PROJECT_DIR$/Code/Code/backwards.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Code/Code/costFunction.py" afterPath="$PROJECT_DIR$/Code/Code/costFunction.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Code/Code/sigmoid.py" afterPath="$PROJECT_DIR$/Code/Code/sigmoid.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Code/Code/sigmoidGradient.py" afterPath="$PROJECT_DIR$/Code/Code/sigmoidGradient.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -46,8 +24,8 @@
       <file leaf-file-name="backwards.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Code/Code/backwards.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="799">
-              <caret line="87" column="16" lean-forward="false" selection-start-line="87" selection-start-column="16" selection-end-line="87" selection-end-column="16" />
+            <state relative-caret-position="2392">
+              <caret line="104" column="14" lean-forward="true" selection-start-line="104" selection-start-column="14" selection-end-line="104" selection-end-column="14" />
               <folding>
                 <element signature="e#0#18#0" expanded="true" />
               </folding>
@@ -55,27 +33,19 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/.gitignore">
+      <file leaf-file-name="costFunction.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Code/Code/costFunction.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="276">
-              <caret line="12" column="12" lean-forward="false" selection-start-line="12" selection-start-column="12" selection-end-line="12" selection-end-column="12" />
-              <folding />
+              <caret line="30" column="28" lean-forward="false" selection-start-line="30" selection-start-column="28" selection-end-line="30" selection-end-column="28" />
+              <folding>
+                <element signature="e#0#18#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="predict.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Code/Code/predict.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="644">
-              <caret line="29" column="12" lean-forward="false" selection-start-line="29" selection-start-column="12" selection-end-line="29" selection-end-column="12" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="train.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="train.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Code/Code/train.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="713">
@@ -88,8 +58,18 @@
       <file leaf-file-name="main.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Code/Code/main.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="322">
+            <state relative-caret-position="-2511">
               <caret line="14" column="8" lean-forward="false" selection-start-line="14" selection-start-column="8" selection-end-line="14" selection-end-column="8" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="mnist2.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Code/Code/mnist2.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-2350">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -98,18 +78,18 @@
       <file leaf-file-name="sigmoid.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Code/Code/sigmoid.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="506">
-              <caret line="22" column="12" lean-forward="false" selection-start-line="22" selection-start-column="12" selection-end-line="22" selection-end-column="12" />
+            <state relative-caret-position="207">
+              <caret line="9" column="74" lean-forward="false" selection-start-line="9" selection-start-column="74" selection-end-line="9" selection-end-column="74" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="costFunction.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Code/Code/costFunction.py">
+      <file leaf-file-name="sigmoidGradient.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Code/Code/sigmoidGradient.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="621">
-              <caret line="31" column="21" lean-forward="false" selection-start-line="31" selection-start-column="21" selection-end-line="31" selection-end-column="21" />
+            <state relative-caret-position="207">
+              <caret line="9" column="0" lean-forward="false" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
               <folding>
                 <element signature="e#0#18#0" expanded="true" />
               </folding>
@@ -136,6 +116,7 @@
       <find>nn_weig</find>
       <find>acc</find>
       <find>print</find>
+      <find>theta</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -145,7 +126,6 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/Code/Code/__init__.py" />
-        <option value="$PROJECT_DIR$/Code/Code/sigmoidGradient.py" />
         <option value="$PROJECT_DIR$/Code/Code/unroll_params.py" />
         <option value="$PROJECT_DIR$/Code/Code/roll_params.py" />
         <option value="$PROJECT_DIR$/Code/Code/debugInializeWeights.py" />
@@ -155,13 +135,14 @@
         <option value="$PROJECT_DIR$/Code/Code/checkNNCost.py" />
         <option value="$PROJECT_DIR$/Code/Code/randInitializeWeights.py" />
         <option value="$PROJECT_DIR$/Code/Code/train.py" />
-        <option value="$PROJECT_DIR$/Code/Code/costFunction.py" />
-        <option value="$PROJECT_DIR$/Code/Code/backwards.py" />
         <option value="$PROJECT_DIR$/Code/Code/predict.py" />
         <option value="$PROJECT_DIR$/Code/Code/main.py" />
-        <option value="$PROJECT_DIR$/Code/Code/sigmoid.py" />
         <option value="$PROJECT_DIR$/resultats" />
         <option value="$PROJECT_DIR$/.gitignore" />
+        <option value="$PROJECT_DIR$/Code/Code/costFunction.py" />
+        <option value="$PROJECT_DIR$/Code/Code/backwards.py" />
+        <option value="$PROJECT_DIR$/Code/Code/sigmoid.py" />
+        <option value="$PROJECT_DIR$/Code/Code/sigmoidGradient.py" />
       </list>
     </option>
   </component>
@@ -172,7 +153,7 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="-1840" />
+    <option name="x" value="80" />
     <option name="y" value="1075" />
     <option name="width" value="1841" />
     <option name="height" value="1086" />
@@ -203,6 +184,24 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="ml1_assignment" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ml1_assignment" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ml1_assignment" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Code" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Code" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -453,9 +452,10 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-1840" y="1075" width="1841" height="1086" extended-state="6" />
+    <frame x="80" y="1075" width="1841" height="1086" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2583005" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2583005" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -483,17 +483,12 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="XDebuggerManager">
-    <breakpoint-manager />
+    <breakpoint-manager>
+      <option name="time" value="1" />
+    </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Code/Code/sigmoid.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="17" column="0" lean-forward="false" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Code/Code/predict.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="736">
@@ -787,13 +782,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Code/Code/checkNNCost.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="95">
-          <caret line="5" column="0" lean-forward="false" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Code/Code/debugInializeWeights.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="92">
@@ -808,61 +796,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Code/Code/sigmoidGradient.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="184">
-          <caret line="9" column="32" lean-forward="false" selection-start-line="9" selection-start-column="32" selection-end-line="9" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Code/Code/randInitializeWeights.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="184">
           <caret line="8" column="18" lean-forward="false" selection-start-line="8" selection-start-column="18" selection-end-line="8" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Code/Code/costFunction.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="621">
-          <caret line="31" column="21" lean-forward="false" selection-start-line="31" selection-start-column="21" selection-end-line="31" selection-end-column="21" />
-          <folding>
-            <element signature="e#0#18#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Code/Code/train.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="713">
-          <caret line="37" column="0" lean-forward="false" selection-start-line="37" selection-start-column="0" selection-end-line="37" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Code/Code/predict.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="644">
-          <caret line="29" column="12" lean-forward="false" selection-start-line="29" selection-start-column="12" selection-end-line="29" selection-end-column="12" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Code/Code/main.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="322">
-          <caret line="14" column="8" lean-forward="false" selection-start-line="14" selection-start-column="8" selection-end-line="14" selection-end-column="8" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Code/Code/backwards.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="799">
-          <caret line="87" column="16" lean-forward="false" selection-start-line="87" selection-start-column="16" selection-end-line="87" selection-end-column="16" />
-          <folding>
-            <element signature="e#0#18#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -874,18 +811,90 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Code/Code/sigmoid.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="506">
-          <caret line="22" column="12" lean-forward="false" selection-start-line="22" selection-start-column="12" selection-end-line="22" selection-end-column="12" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="276">
           <caret line="12" column="12" lean-forward="false" selection-start-line="12" selection-start-column="12" selection-end-line="12" selection-end-column="12" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Code/Code/checkNNCost.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="18" lean-forward="true" selection-start-line="0" selection-start-column="18" selection-end-line="0" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Code/Code/costFunction.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="276">
+          <caret line="30" column="28" lean-forward="false" selection-start-line="30" selection-start-column="28" selection-end-line="30" selection-end-column="28" />
+          <folding>
+            <element signature="e#0#18#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Code/Code/main.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2511">
+          <caret line="14" column="8" lean-forward="false" selection-start-line="14" selection-start-column="8" selection-end-line="14" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Code/Code/mnist2.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2350">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Code/Code/predict.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-6">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#18#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Code/Code/backwards.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2392">
+          <caret line="104" column="14" lean-forward="true" selection-start-line="104" selection-start-column="14" selection-end-line="104" selection-end-column="14" />
+          <folding>
+            <element signature="e#0#18#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Code/Code/sigmoid.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="207">
+          <caret line="9" column="74" lean-forward="false" selection-start-line="9" selection-start-column="74" selection-end-line="9" selection-end-column="74" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Code/Code/sigmoidGradient.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="207">
+          <caret line="9" column="0" lean-forward="false" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#18#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Code/Code/train.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="713">
+          <caret line="37" column="0" lean-forward="false" selection-start-line="37" selection-start-column="0" selection-end-line="37" selection-end-column="0" />
           <folding />
         </state>
       </provider>

@@ -7,6 +7,10 @@ from predict import predict
 
 
 def insertOne(x):
+    """
+    :param x: matrix to modify
+    :return: the same matrix but with an additional row of ones
+    """
     s = x.shape
     a = np.ones((s[0], s[1]+1))
     a[:, 1:] = x
@@ -14,13 +18,15 @@ def insertOne(x):
 
 
 def backwards(nn_weights, layers, X, y, num_labels, lambd):
-    # Computes the gradient fo the neural network.
-    # nn_weights: Neural network parameters (vector)
-    # layers: a list with the number of units per layer.
-    # X: a matrix where every row is a training example for a handwritten digit image
-    # y: a vector with the labels of each instance
-    # num_labels: the number of units in the output layer
-    # lambd: regularization factor
+    """
+    :param nn_weights: Neural network parameters (vector)
+    :param layers: a list with the number of units per layer.
+    :param X: a matrix where every row is a training example for a handwritten digit image
+    :param y: a vector with the labels of each instance
+    :param num_labels: the number of units in the output layer
+    :param lambd: regularization factor
+    :return: Computes the gradient fo the neural network.
+    """
 
     # Setup some useful variables
     m = X.shape[0]
@@ -31,14 +37,13 @@ def backwards(nn_weights, layers, X, y, num_labels, lambd):
     # nn_params and need to be converted back into the weight matrices.
     Theta = roll_params(nn_weights, layers)
 
-    # ================================ TODO ================================
     # The vector y passed into the function is a vector of labels
     # containing values from 1..K. You need to map this vector into a
     # binary vector of 1's and 0's to be used with the neural network
     # cost function.
     yv = np.zeros((num_labels, m))
     for i in range(len(y)):
-        yv[int(y[i]), i] = 1  # TODO: the int conversion is maybe not the useful
+        yv[int(y[i]), i] = 1
     yv = np.transpose(yv)
 
     a = []
@@ -47,9 +52,10 @@ def backwards(nn_weights, layers, X, y, num_labels, lambd):
     a.append(insertOne(x))
     z.append(x)
 
-    pred = predict(Theta, X)
-    accuracy = np.mean(y == pred) * 100
-    print("accuracy = "+str(accuracy))
+    # if you want to be able to follow the training accuracy:
+    # pred = predict(Theta, X)
+    # accuracy = np.mean(y == pred) * 100
+    # print(accuracy)
 
     for i in range(num_layers - 1):
 
@@ -75,20 +81,16 @@ def backwards(nn_weights, layers, X, y, num_labels, lambd):
         temp = np.dot(np.transpose(delta[i + 1]), a[i])
         Delta.append(temp)
 
-    cost = (yv * np.log(x) + (1 - yv) * np.log(1 - x)) / m
-    cost = -np.sum(cost)
-
-    somme = 0
-
-    for i in range(num_layers - 1):
-        somme += lambd * np.sum(Theta[i] ** 2) / (2 * m)
-
-    cost += somme
-
-    print("cost = "+str(cost))
-
-    # ================================ TODO ================================
-    # In this point implement the backpropagaition algorithm
+    # if you want to follow the cost during the training:
+    # cost = (yv * np.log(x) + (1 - yv) * np.log(1 - x)) / m
+    # cost = -np.sum(cost)
+    #
+    # somme = 0
+    #
+    # for i in range(num_layers - 1):
+    #     somme += lambd * np.sum(Theta[i] ** 2) / (2 * m)
+    #
+    # cost += somme
 
     Theta_grad = [(d / m) for d in Delta]
 
@@ -97,7 +99,7 @@ def backwards(nn_weights, layers, X, y, num_labels, lambd):
         current = lambd*t/m
         # d'après le poly il faudrait qu'il y ait cette ligne
         # mais après quand on son checkNNGradient il vaut mieux enlever
-        # cette ligne:
+        # cette ligne donc je ne sais pas ...:
         # current[:, 0] = current[:, 0]*0
         Theta_grad[i] += current
         i += 1
